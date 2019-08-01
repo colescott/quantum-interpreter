@@ -57,7 +57,6 @@ interpret opts =
     initialState qs ins =
       MachineState
         { quantumState = makeQuantumState qs
-        , measurementRegister = 0
         , instructions = ins
         , pc = 0
         , running = True
