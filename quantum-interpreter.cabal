@@ -1,0 +1,44 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 1f8ea36c74b7e7dac8cdc6e708f2db0fe1a039cee68043bd5e20256a99abb7fd
+
+name:           quantum-interpreter
+version:        0.1.0.0
+category:       web
+homepage:       https://github.com/colescott/quantum-interpreter#readme
+author:         Cole Scott
+maintainer:     me@colescott.io
+copyright:      GPL
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+
+executable quantum-interpreter
+  main-is: Main.hs
+  other-modules:
+      Gates
+      Instruction
+      Interpreter
+      Parser
+      State
+      Paths_quantum_interpreter
+  hs-source-dirs:
+      src
+  default-extensions: NoImplicitPrelude GeneralizedNewtypeDeriving
+  ghc-options: -Wall -Wextra
+  build-depends:
+      base >=4.7 && <5
+    , matrix
+    , optparse-applicative
+    , parsec
+    , protolude
+    , random
+    , transformers
+    , vector
+  default-language: Haskell2010

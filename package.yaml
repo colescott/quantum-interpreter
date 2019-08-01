@@ -1,0 +1,34 @@
+name:                quantum-interpreter
+version:             0.1.0.0
+#synopsis:
+#description:
+homepage:            https://github.com/colescott/quantum-interpreter#readme
+license:             BSD3
+author:              Cole Scott
+maintainer:          me@colescott.io
+copyright:           GPL
+category:            web
+extra-source-files:
+- README.md
+
+ghc-options:
+  - -Wall
+  - -Wextra
+default-extensions:
+  - NoImplicitPrelude
+  - GeneralizedNewtypeDeriving
+
+dependencies:
+  - base >= 4.7 && < 5
+  - matrix
+  - vector
+  - random
+  - parsec
+  - optparse-applicative
+  - transformers
+  - protolude
+
+executables:
+  quantum-interpreter:
+    source-dirs:      src
+    main:             Main.hs
