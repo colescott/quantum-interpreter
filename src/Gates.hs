@@ -130,7 +130,7 @@ applynQGate s a qubits = do
     n = dimensionQubits (length s)
     transpositionsToOperation :: [Int] -> Operation
     transpositionsToOperation ts =
-      foldr composeOperations (M.fromLists [[1]]) $
+      foldr composeOperations (M.identity (2 ^ n)) $
       map (\x -> liftOperation Gates.swap x n) ts
     u01 :: Operation
     u01 = liftOperation a 0 n
